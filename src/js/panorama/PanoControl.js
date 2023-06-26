@@ -7,7 +7,7 @@ export default class PanoControll {
     }
 
     loadTextureList() {
-        fetch('/public/access/textures/textures.json').then(res => {
+        fetch('./access/textures/textures.json').then(res => {
             res.json().then(res => {
                 this.texturesList = res;
                 this.panorama.loadTexture(this.texturesList[this.counter])

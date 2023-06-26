@@ -23,7 +23,7 @@ export default class Panorama {
     }
 
     loadTexture(filename) {
-        this.texture = new THREE.TextureLoader().load(`/public/access/textures/${filename}`)
+        this.texture = new THREE.TextureLoader().load(`./access/textures/${filename}`)
         this.texture.colorSpace = THREE.SRGBColorSpace;
         this.material = new THREE.MeshBasicMaterial({map: this.texture});
         this.mesh.material = this.material;
